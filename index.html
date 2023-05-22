@@ -6,53 +6,236 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="styles/normalize.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
 </head>
 <body class="body">
     <header class="header">
-        <div class="wrapper">
-            <div class="container">
-                <a
-                        class="logo"
-                        href="https://iamchrisep.github.io/pop-it/"
-                >
-                    НЕ_ПУПЫРКА.РУ
-                </a>
-                <nav class="nav">
-                    <ul class="nav--wrap">
-                        <li class="nav--item">
-                            <a
-                                class="nav--link"
+        <div class="header__container">
+            <a
+                    class="header__logo"
+                    href="https://iamchrisep.github.io/pop-it/"
+            >
+                НЕ_ПУПЫРКА.РУ
+            </a>
+            <nav class="nav">
+                <ul class="nav__wrap">
+                    <li class="nav__item">
+                        <a
+                                class="nav__link"
+                            href="https://iamchrisep.github.io/pop-it/"
+                    >
+                            О нас
+                    </a>
+                    </li>
+                    <li class="nav__item">
+                        <a
+                                class="nav__link"
                                 href="https://iamchrisep.github.io/pop-it/"
                         >
-                                О нас
+                            Скидки
                         </a>
-                        </li>
-                        <li class="nav--item">
-                            <a
-                                    class="nav--link"
-                                    href="https://iamchrisep.github.io/pop-it/"
-                            >
-                                Скидки
-                            </a>
-                        <li class="nav--item">
-                            <a
-                                    class="nav--link"
-                                    href="https://iamchrisep.github.io/pop-it/"
-                            >
-                                Контакты
-                            </a>
-                    </ul>
-                </nav>
-            </div>
+                    </li>
+                    <li class="nav__item">
+                        <a
+                                class="nav__link"
+                                href="https://iamchrisep.github.io/pop-it/"
+                        >
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <main>
-        <div class="wrapper">
-            TEST
-        </div>
+    <main class="main">
+        <section class="main__wrapper main__wrapper_color_orange main__wrapper_color_change">
+            <div class="main__container main__container_justify_between">
+                <div class="carousel">
+                    <div class="carousel__slide carousel__slide-1">
+                        <img
+                                alt="background"
+                                src="images/background.png"
+                                class="carousel__image"
+                        />
+                    </div>
+                    <div class="carousel__slide carousel__slide-1">
+                        <img
+                                alt="background"
+                                src="images/background2.png"
+                                class="carousel__image"
+                        />
+                    </div>
+                </div>
+                <div class="description">
+                    <h1 class="description__title">POP IT!</h1>
+                    <p class="description__text">
+                        Лучшая игрушка-антистресс - бесконечная пупырчатая пленка!
+                    </p>
+                    <button class="description__button">Купить</button>
+                </div>
+            </div>
+        </section>
+        <section class="main__wrapper">
+            <div class="main__container">
+                <div class="about">
+                    <h2 class="about__title">Что такое Pop It?</h2>
+                    <p class="about__text">
+                        Pop It дословно переводится как "лопни это".
+                        Это детская игра, процесс в которой можно сравнить с лопанием воздушно-пузырчатой упаковочной пленки.
+                        Но в отличии от пленки поп-иты можно давить с характерными ощущениями и звуками "бесконечно":
+                        десятки силиконовых пузырей просто выдавливаются в другую сторону.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="main__wrapper main__wrapper_color_blue">
+            <div class="main__container">
+                <div class="choose">
+                    <h2 class="choose__title">Выбери свой Pop It!</h2>
+                    <div class="choose__cards">
+                        <div class="choose__card">
+                            <img
+                                    alt="square"
+                                    src="images/square.png"
+                                    class="choose__image"
+                            />
+                            <p class="choose__text">Разноцветный квадратный</p>
+                            <button class="choose__button">Купить</button>
+                        </div>
+                        <div class="choose__card">
+                            <img
+                                    alt="square"
+                                    src="images/amongus.png"
+                                    class="choose__image"
+                            />
+                            <p class="choose__text">Among Us, мраморный</p>
+                            <button class="choose__button">Купить</button>
+                        </div>
+                        <div class="choose__card">
+                            <img
+                                    alt="square"
+                                    src="images/round.png"
+                                    class="choose__image"
+                            />
+                            <p class="choose__text">Разноцветный круглый</p>
+                            <button class="choose__button">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><section class="main__wrapper">
+            <div class="main__container main__container_justify_between">
+                <div class="carousel carousel--justify-center">
+                    <div class="carousel__slide carousel__slide-2">
+                        <img
+                                alt="background"
+                                src="images/bg-grid.png"
+                                class="carousel__image"
+                        />
+                    </div>
+                    <div class="carousel__slide carousel__slide-2">
+                        <img
+                                alt="background"
+                                src="images/bg-grid2.png"
+                                class="carousel__image"
+                        />
+                    </div>
+                </div>
+                <div class="rule">
+                    <div class="rule__wrapper">
+                        <h1 class="rule__title">Правила игры</h1>
+                        <p class="rule__text">
+                            Игроки ходят по очереди и нажимают на пупырки.
+                            Нужно обязательно заканчивать ряд который начали.
+                            Нажимать можно максимум на 3 пупырки одновременно
+                            (обязательно должны быть рядом, нельзя нажимать сразу несколько пупырок, если они не находятся впритык).
+                            Задача сделать так, чтобы соперник сходил последним.
+                            Кто ходил последним - тот проиграл!)
+                        </p>
+                    </div>
+                    <img class="rule__image" alt="photo" src="images/photo.jpg" />
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <nav class="footer__nav">
+                <ul class="footer__nav__wrap">
+                    <li class="footer__nav__item">
+                        <a
+                                class="footer__logo"
+                                href="https://iamchrisep.github.io/pop-it/"
+                        >
+                            НЕ_ПУПЫРКА.РУ
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a
+                                class="footer__nav__link"
+                                href="https://iamchrisep.github.io/pop-it/"
+                        >
+                            Способы оплаты
+                        </a>
+                    </li>
+                    <li class="footer__nav__item">
+                        <a
+                                class="footer__nav__link"
+                                href="https://iamchrisep.github.io/pop-it/"
+                        >
+                            Доставка
+                        </a>
+                    </li>
+                    <li class="footer__nav__item">
+                        <a
+                                class="footer__nav__link"
+                                href="https://iamchrisep.github.io/pop-it/"
+                        >
+                            Опт
+                        </a>
+                    </li>
+                    <li class="footer__nav__item">
+                        <a
+                                class="footer__nav__link"
+                                href="https://iamchrisep.github.io/pop-it/"
+                        >
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
+
+<script>
+    let slideIndex = [1, 1];
+    let slideId = ["carousel__slide-1", "carousel__slide-2"]
+    startCarousel(1, 0);
+    startCarousel(1, 1);
+
+    function changeSlide(n, no) {
+        startCarousel(slideIndex[no] += n, no);
+    }
+
+    function startCarousel(n, no) {
+        let i;
+        let x = document.getElementsByClassName(slideId[no]);
+        let back = document.getElementsByClassName("main__wrapper_color_change");
+        if (n > x.length) {slideIndex[no] = 1}
+        if (slideIndex[0] === 1) {
+            back[0].style.background = "#ffbf69";
+        } else {
+            back[0].style.background = "#fc2e20";
+        }
+        if (n < 1) {slideIndex[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex[no]-1].style.display = "flex";
+        setTimeout(() => changeSlide(1, no), 5000);
+    }
+</script>
 </html>

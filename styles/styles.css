@@ -1,11 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
 .body {
     display: flex;
     flex-direction: column;
-    align-items: center;
     color: #000000;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .header {
@@ -17,9 +23,9 @@
 }
 
 .header__container {
-    max-width: 1206px;
+    max-width: 1366px;
     width: 100%;
-    margin: 40px 80px;
+    padding: 40px 80px;
     display: flex;
     justify-content: space-between;
 }
@@ -44,6 +50,7 @@
     display: flex;
     gap: 72px;
     list-style-type: none;
+    padding: 0;
 }
 
 .nav__link {
@@ -51,10 +58,28 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
+    padding-bottom: 4px;
 }
 
 .nav__link:hover {
     border-bottom: 1px solid #000000;
+}
+
+#nav__button {
+    display: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 48px;
+    z-index: 150;
+}
+
+.nav__button_image {
+    width: 100%;
+}
+
+#nav__button_cross {
+    display: none;
 }
 
 .main {
@@ -81,9 +106,9 @@
 }
 
 .main__container {
-    max-width: 1206px;
+    max-width: 1366px;
     width: 100%;
-    margin: 40px 80px;
+    padding: 40px 80px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -119,8 +144,9 @@
 
 .carousel__image {
     vertical-align: middle;
+    width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: scale-down;
 }
 
 .description {
@@ -145,6 +171,7 @@
 .description__button {
     font-size: 28px;
     font-weight: 500;
+    line-height: 1;
     text-transform: uppercase;
     background-color: #cbf3f0;
     border: none;
@@ -189,8 +216,8 @@
 
 .choose__cards {
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 40px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 40px;
     justify-items: center;
     width: 100%;
 }
@@ -218,6 +245,7 @@
 .choose__button {
     font-size: 16px;
     font-weight: 500;
+    line-height: 1;
     text-transform: uppercase;
     background-color: #ffbf69;
     border: none;
@@ -241,9 +269,7 @@
 }
 
 .rule__wrapper {
-    max-width: 800px;
     width: 100%;
-    flex: 1 1 auto;
 }
 
 .rule__title {
@@ -253,10 +279,9 @@
 }
 
 .rule__image {
-    width: auto;
-    display: flex;
-    flex: 0 0 auto;
+    width: 100%;
     max-width: 450px;
+    display: flex;
 }
 
 .footer {
@@ -269,9 +294,9 @@
 }
 
 .footer__container {
-    max-width: 1206px;
+    max-width: 1366px;
     width: 100%;
-    margin: 40px 80px;
+    padding: 40px 80px;
     display: flex;
     justify-content: space-between;
 }
@@ -281,6 +306,7 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
+    padding-bottom: 4px;
 }
 
 .footer__logo:hover {
@@ -297,6 +323,7 @@
     display: flex;
     gap: 72px;
     list-style-type: none;
+    padding: 0;
     justify-content: space-between;
     width: 100%;
 }
@@ -305,8 +332,89 @@
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
+    padding-bottom: 4px;
 }
 
 .footer__nav__link:hover {
     border-bottom: 1px solid #ffffff;
+}
+
+@media screen and (max-width: 960px) {
+    .header__container,
+    .main__container,
+    .footer__container {
+        padding: 40px;
+    }
+
+    .header__container {
+        align-items: center;
+    }
+
+    .about,
+    .choose,
+    .rule {
+        margin: 20px 0;
+    }
+
+    .nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 120px 40px;
+        background-color: #ffbf69;
+        z-index: 100;
+    }
+
+    #nav__button {
+        display: flex;
+    }
+
+    .nav__wrap {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .description {
+        margin: 20px 0;
+    }
+
+    .description__title {
+        font-size: 60px;
+        line-height: 1;
+    }
+
+    .description__text {
+        font-size: 16px;
+        margin: 20px 0 40px;
+    }
+
+    .description__button {
+        font-size: 16px;
+        padding: 10px 24px;
+    }
+
+    .about__text {
+        text-align: left;
+    }
+
+    .choose__cards {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    .rule {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .rule__title {
+        text-align: center;
+    }
+
+    .footer__nav__wrap {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

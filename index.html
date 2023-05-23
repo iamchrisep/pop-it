@@ -19,7 +19,7 @@
             >
                 НЕ_ПУПЫРКА.РУ
             </a>
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <ul class="nav__wrap">
                     <li class="nav__item">
                         <a
@@ -47,6 +47,23 @@
                     </li>
                 </ul>
             </nav>
+            <button
+                    id="nav__button"
+                    onClick="toggleNav()"
+            >
+                <img
+                        id="nav__button_menu"
+                        class="nav__button_image"
+                        alt="menu"
+                        src="images/menu.png"
+                />
+                <img
+                        id="nav__button_cross"
+                        class="nav__button_image"
+                        alt="cross"
+                        src="images/cross.png"
+                />
+            </button>
         </div>
     </header>
     <main class="main">
@@ -209,33 +226,5 @@
         </div>
     </footer>
 </body>
-
-<script>
-    let slideIndex = [1, 1];
-    let slideId = ["carousel__slide-1", "carousel__slide-2"]
-    startCarousel(1, 0);
-    startCarousel(1, 1);
-
-    function changeSlide(n, no) {
-        startCarousel(slideIndex[no] += n, no);
-    }
-
-    function startCarousel(n, no) {
-        let i;
-        let x = document.getElementsByClassName(slideId[no]);
-        let back = document.getElementsByClassName("main__wrapper_color_change");
-        if (n > x.length) {slideIndex[no] = 1}
-        if (slideIndex[0] === 1) {
-            back[0].style.background = "#ffbf69";
-        } else {
-            back[0].style.background = "#fc2e20";
-        }
-        if (n < 1) {slideIndex[no] = x.length}
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex[no]-1].style.display = "flex";
-        setTimeout(() => changeSlide(1, no), 5000);
-    }
-</script>
+<script src="scripts/script.js"></script>
 </html>
